@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { PaymentHelper } from '../support/helpers/payments';
 
-test('enter payemnt checkout page', async ({ page }) => {
+test('enter payment checkout page', async ({ page }) => {
   // checkout page
   await page.goto('https://playwright.dev/checkout/1234');
   const payment = new PaymentHelper(page)
@@ -17,7 +17,7 @@ test('enter payemnt checkout page', async ({ page }) => {
 });
 
 test('enter payment info account page', async ({ page }) => {
-  // checkout page
+  // account page
   await page.goto('https://playwright.dev/account/1234');
   const payment = new PaymentHelper(page)
   await payment.enterPaymenInfo({
